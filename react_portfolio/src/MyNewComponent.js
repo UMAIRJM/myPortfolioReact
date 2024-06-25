@@ -1,13 +1,13 @@
 import { useState } from 'react';
 import './TextInput'
-import TextInput from './TextInput';
+//import TextInput from './TextInput';
 import OutlinedCard from './Card';
 import DrawerAppBar from './navigationBar';
 
 function MyComponent(){
-    const[inputValue1,setInputValue] = useState('')
-    const [rand ,setRand] = useState(0);
-    const[items,setItems] = useState([]);
+    // const[inputValue1,setInputValue] = useState('')
+    // const [rand ,setRand] = useState(0);
+    // const[items,setItems] = useState([]);
 return(
     //Below is the code for basic intro to react passing props etc.
     // <div >
@@ -42,15 +42,13 @@ return(
 
     // </div>
 
-    <div >
-        <div style={styles.divStyle}>
-        <OutlinedCard word={'umair'} definition={'he is creative man'} detail={'He is very profound and efficinet software engineer always admire his work'}/>
-        <OutlinedCard/>
-        <OutlinedCard/>
-
-        </div>
+    <div style={styles.divStyle}>
+        
         <div>
             <DrawerAppBar/>
+        </div>
+        <div style={{backgroundColor:'red'}}>
+            <p style={{color: 'white'}}>Hello I am inside</p>
         </div>
         
     </div>
@@ -62,16 +60,25 @@ export default MyComponent;
 
 
 const styles = {
-    mydesign:{
-        color:'red',
+
+
+    navigationDiv:{
+        flex: 1,
+        margin: '0',
+        padding:'0'
 
     },
+ 
     divStyle:{
         
         display:'flex',
-        flexDirection:'row',
-        padding:20,
-        alignItem:'center',
-        alignSelf:'center',
+        flexDirection: 'column',
+        marginLeft: '10%',
+        marginRight: '10%',
+        backgroundColor: 'black',
+        marginTop:'5%',
+        padding: '10px',
+          boxSizing: 'border-box'
+
     }
 }
